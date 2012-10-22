@@ -1,0 +1,753 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		background-color:#999999;
+		font-family:"helvetica","arial",sans-serif;
+		font-weight:bold;
+		-webkit-perspective: 1000;
+		-webkit-perspective: 800;
+		-webkit-perspective-origin: 50% 0%;
+	}
+	div#timor{
+		position:relative;
+		width:350px;
+		height:350px;
+		margin: 250px auto 100px;
+		-webkit-animation: spin 6s infinite ease;
+		-webkit-transform-origin:50px 50px;
+		/*-webkit-transform: rotateY(-180deg) rotateX(-30deg);*/
+		-webkit-transform-style:preserve-3d;
+	}
+	@-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0deg); }
+      to   { -webkit-transform: rotateY(360deg); }
+    }
+	.hidden{
+		transform: rotate(-270deg);
+		-ms-transform:rotate(-270deg);
+		-moz-transform:rotate(-270deg);
+		-webkit-transform:rotate(-270deg);
+		-o-transform:rotate(-270deg);
+	}
+	/*.card:hover{
+		transform: rotate(-270deg);
+		-ms-transform:rotate(-270deg);
+		-moz-transform:rotate(-270deg);
+		-webkit-transform:rotateZ(-270deg);
+		-o-transform:rotate(-270deg);
+	}*/
+	.card{
+		position:absolute;
+		border-top-left-radius:50px;
+		border-bottom-left-radius:50px;
+		background-color:#ffffff;
+		/*background:-webkit-gradient(linear, 75% 100%, 100% 50%, from(#eeeeee), to(#ffffff));*/
+		height:100px;
+		transform-origin:50px 50px;
+		-ms-transform-origin:50px 50px;
+		-moz-transform-origin:50px 50px;
+		-webkit-transform-origin:50px 50px;
+		-o-transform-origin:50px 50px;
+		transition: transform 2s;
+		-moz-transition: -moz-transform 2s; /* Firefox 4 */
+		-webkit-transition: -webkit-transform 2s; /* Safari and Chrome */
+		-o-transition: -o-transform 2s; /* Opera */
+	}
+	.d1{
+		height:98px;
+		width:158px;
+		line-height:98px;
+		font-size:108px;
+		text-align:right;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+	.d2{
+		height:98px;
+		width:58px;
+		padding-left:160px;
+		line-height:98px;
+		font-size:108px;
+		text-align:left;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+	.w{
+		background:transparent;
+		width:300px;
+	}
+	.w0{
+		border-top-left-radius:50px;
+		border-top-right-radius:25px;
+		border-bottom-left-radius:50px;
+		position:absolute;
+		left:0;
+		top:0;
+		width:159px;
+		height:98px;
+		background-color:#ffffff;
+		border-left:1px solid rgba(0,0,0,0.1);
+		border-top:1px solid rgba(0,0,0,0.1);
+		border-bottom:1px solid rgba(0,0,0,0.1);
+	}
+	.w1{
+		width:119px;
+		position:absolute;
+		left:160px;
+		top:50px;
+		padding-left:70px;
+		background-color:#ffffff;
+		/*background:-webkit-gradient(linear, 50% 100%, 100% 50%, from(#eeeeee), to(#ffffff));*/
+		font-size:50px;
+		line-height:48px;
+		height:48px;
+		border-right:1px solid rgba(0,0,0,0.1);
+		border-bottom:1px solid rgba(0,0,0,0.1);
+		border-top:1px solid rgba(0,0,0,0.1);
+	}
+	.m{
+		height:98px;
+		width:118px;
+		text-align:left;
+		padding-left:230px;
+		border-top-right-radius:50px;
+		font-size:36px;
+		line-height:50px;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+	.side{
+		position:absolute;
+		top:101px;
+		left:101px;
+		height:250px;
+		width:250px;
+		border-left:1px solid rgba(0,0,0,0.8);
+		border-top:1px solid rgba(0,0,0,0.8);
+	}
+	#back{
+		top:-2px;
+		left:-2px;
+		position:absolute;
+		width:354px;
+		height:104px;
+		border-top-left-radius:52px;
+		border-top-right-radius:52px;
+		background-color:#000000;
+		opacity:0.9;
+	}
+	#back2{
+		top:102px;
+		left:-2px;
+		position:absolute;
+		width:104px;
+		height:250px;
+		background-color:#000000;
+		opacity:0.9;
+	}
+	#front{
+		top:-2px;
+		left:-2px;
+		position:absolute;
+		width:104px;
+		height:354px;
+		border-top-left-radius:52px;
+		border-top-right-radius:52px;
+		background-color:#000000;
+		opacity:0.9;
+	}
+	#roll{
+		top:25px;
+		left:25px;
+		position:absolute;
+		width:50px;
+		height:50px;
+		border-radius:25px;
+		box-shadow:0 0 4px rgba(0,0,0,.9);
+	}
+	.s{
+		/*box-shadow:0 0 4px rgba(64,64,64,0.2);*/
+	}
+	#side1{
+		position:absolute;
+		top:102px;
+		left:102px;
+		height:34px;
+		width:250px;
+		background-color:#000000;
+		opacity:0.8;
+		-webkit-transform: rotateX(90deg);
+		-webkit-transform-origin:0 0;
+	}
+	#side2{
+		position:absolute;
+		top:102px;
+		left:102px;
+		height:250px;
+		width:34px;
+		background-color:#000000;
+		opacity:0.8;
+		-webkit-transform: rotateY(-90deg);
+		-webkit-transform-origin:0 0;
+	}
+	#cfront{
+		position:absolute;
+		-webkit-transform: translateZ(33px);
+	}
+	#cd10{
+		position:absolute;
+		-webkit-transform: translateZ(32px)
+	}
+	#cd20{
+		position:absolute;
+		-webkit-transform: translateZ(31px)
+	}
+	#cd30{
+		position:absolute;
+		-webkit-transform: translateZ(30px)
+	}
+	#cd1{
+		position:absolute;
+		-webkit-transform: translateZ(29px)
+	}
+	#cd2{
+		position:absolute;
+		-webkit-transform: translateZ(28px)
+	}
+	#cd3{
+		position:absolute;
+		-webkit-transform: translateZ(27px)
+	}
+	#cd4{
+		position:absolute;
+		-webkit-transform: translateZ(26px)
+	}
+	#cd5{
+		position:absolute;
+		-webkit-transform: translateZ(25px)
+	}
+	#cd6{
+		position:absolute;
+		-webkit-transform: translateZ(24px)
+	}
+	#cd7{
+		position:absolute;
+		-webkit-transform: translateZ(23px)
+	}
+	#cd8{
+		position:absolute;
+		-webkit-transform: translateZ(22px)
+	}
+	#cd9{
+		position:absolute;
+		-webkit-transform: translateZ(21px)
+	}
+	#cd0{
+		position:absolute;
+		-webkit-transform: translateZ(20px)
+	}
+	#cw0{
+		position:absolute;
+		-webkit-transform: translateZ(19px)
+	}
+	#cw1{
+		position:absolute;
+		-webkit-transform: translateZ(18px)
+	}
+	#cw2{
+		position:absolute;
+		-webkit-transform: translateZ(17px)
+	}
+	#cw3{
+		position:absolute;
+		-webkit-transform: translateZ(16px)
+	}
+	#cw4{
+		position:absolute;
+		-webkit-transform: translateZ(15px)
+	}
+	#cw5{
+		position:absolute;
+		-webkit-transform: translateZ(14px)
+	}
+	#cw6{
+		position:absolute;
+		-webkit-transform: translateZ(13px)
+	}
+	#cm1{
+		position:absolute;
+		-webkit-transform: translateZ(12px)
+	}
+	#cm2{
+		position:absolute;
+		-webkit-transform: translateZ(11px)
+	}
+	#cm3{
+		position:absolute;
+		-webkit-transform: translateZ(10px)
+	}
+	#cm4{
+		position:absolute;
+		-webkit-transform: translateZ(9px)
+	}
+	#cm5{
+		position:absolute;
+		-webkit-transform: translateZ(8px)
+	}
+	#cm6{
+		position:absolute;
+		-webkit-transform: translateZ(7px)
+	}
+	#cm7{
+		position:absolute;
+		-webkit-transform: translateZ(6px)
+	}
+	#cm8{
+		position:absolute;
+		-webkit-transform: translateZ(5px)
+	}
+	#cm9{
+		position:absolute;
+		-webkit-transform: translateZ(4px)
+	}
+	#cm10{
+		position:absolute;
+		-webkit-transform: translateZ(3px)
+	}
+	#cm11{
+		position:absolute;
+		-webkit-transform: translateZ(2px)
+	}
+	#cm12{
+		position:absolute;
+		-webkit-transform: translateZ(1px)
+	}
+	</style>
+	<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	function d1ShowList(num){
+		switch(num){
+			case 0:
+				return [];
+				break;
+			case 3:
+				return [$("d30")];
+				break;
+			case 2:
+				return [$("d20"),$("d30")];
+				break;
+			case 1:
+				return [$("d10"),$("d20"),$("d30")];
+				break;
+		}
+	}
+	function d1HideList(num){
+		switch(num){
+			case 1:
+				return [];
+				break;
+			case 2:
+				return [$("d10")];
+				break;
+			case 3:
+				return [$("d10"),$("d20")];
+				break;
+			case 0:
+				return [$("d10"),$("d20"),$("d30")];
+				break;
+		}
+	}
+	function d2ShowList(num){
+		switch(num){
+			case 0:
+				return [$("d0")];
+				break;
+			case 9:
+				return [$("d9"),$("d0")];
+				break;
+			case 8:
+				return [$("d8"),$("d9"),$("d0")];
+				break;
+			case 7:
+				return [$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 6:
+				return [$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 5:
+				return [$("d5"),$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 4:
+				return [$("d4"),$("d5"),$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 3:
+				return [$("d3"),$("d4"),$("d5"),$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 2:
+				return [$("d2"),$("d3"),$("d4"),$("d5"),$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+			case 1:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5"),$("d6"),$("d7"),$("d8"),$("d9"),$("d0")];
+				break;
+		}
+	}
+	function d2HideList(num){
+		switch(num){
+			case 1:
+				return [];
+				break;
+			case 2:
+				return [$("d1")];
+				break;
+			case 3:
+				return [$("d1"),$("d2")];
+				break;
+			case 4:
+				return [$("d1"),$("d2"),$("d3")];
+				break;
+			case 5:
+				return [$("d1"),$("d2"),$("d3"),$("d4")];
+				break;
+			case 6:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5")];
+				break;
+			case 7:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5"),$("d6")];
+				break;
+			case 8:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5"),$("d6"),$("d7")];
+				break;
+			case 9:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5"),$("d6"),$("d7"),$("d8")];
+				break;
+			case 0:
+				return [$("d1"),$("d2"),$("d3"),$("d4"),$("d5"),$("d6"),$("d7"),$("d8"),$("d9")];
+				break;
+		}
+	}
+	function wShowList(num){
+		switch(num){
+			case 6:
+				return [$("w6")];
+				break;
+			case 5:
+				return [$("w5"),$("w6")];
+				break;
+			case 4:
+				return [$("w4"),$("w5"),$("w6")];
+				break;
+			case 3:
+				return [$("w3"),$("w4"),$("w5"),$("w6")];
+				break;
+			case 2:
+				return [$("w2"),$("w3"),$("w4"),$("w5"),$("w6")];
+				break;
+			case 1:
+				return [$("w1"),$("w2"),$("w3"),$("w4"),$("w5"),$("w6")];
+				break;
+			case 0:
+				return [$("w0"),$("w1"),$("w2"),$("w3"),$("w4"),$("w5"),$("w6")];
+				break;
+		}
+	}
+	function wHideList(num){
+		switch(num){
+			case 6:
+				return [$("w0"),$("w1"),$("w2"),$("w3"),$("w4"),$("w5")];
+				break;
+			case 5:
+				return [$("w0"),$("w1"),$("w2"),$("w3"),$("w4")];
+				break;
+			case 4:
+				return [$("w0"),$("w1"),$("w2"),$("w3")];
+				break;
+			case 3:
+				return [$("w0"),$("w1"),$("w2")];
+				break;
+			case 2:
+				return [$("w0"),$("w1")];
+				break;
+			case 1:
+				return [$("w0")];
+				break;
+			case 0:
+				return [];
+				break;
+		}
+	}
+	function mShowList(num){
+		switch(num){
+			case 12:
+				return [$("m12")];
+				break;
+			case 11:
+				return [$("m11"),$("m12")];
+				break;
+			case 10:
+				return [$("m10"),$("m11"),$("m12")];
+				break;
+			case 9:
+				return [$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 8:
+				return [$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 7:
+				return [$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 6:
+				return [$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 5:
+				return [$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 4:
+				return [$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 3:
+				return [$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 2:
+				return [$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+			case 1:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11"),$("m12")];
+				break;
+		}
+	}
+	function mHideList(num){
+		switch(num){
+			case 12:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10"),$("m11")];
+				break;
+			case 11:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9"),$("m10")];
+				break;
+			case 10:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8"),$("m9")];
+				break;
+			case 9:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7"),$("m8")];
+				break;
+			case 8:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6"),$("m7")];
+				break;
+			case 7:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5"),$("m6")];
+				break;
+			case 6:
+				return [$("m1"),$("m2"),$("m3"),$("m4"),$("m5")];
+				break;
+			case 5:
+				return [$("m1"),$("m2"),$("m3"),$("m4")];
+				break;
+			case 4:
+				return [$("m1"),$("m2"),$("m3")];
+				break;
+			case 3:
+				return [$("m1"),$("m2")];
+				break;
+			case 2:
+				return [$("m1")];
+				break;
+			case 1:
+				return [];
+				break;
+		}
+	}
+
+	function setday(str){
+		var date=new Date(str);
+		var num=date.getDate();
+		var day=date.getDay();
+		var month=date.getMonth()+1
+		var d2=num%10;
+		var d1=(num-d2)/10;
+		var show=d1ShowList(d1).concat(d2ShowList(d2)).concat(wShowList(day)).concat(mShowList(month));
+		var hide=d1HideList(d1).concat(d2HideList(d2)).concat(wHideList(day)).concat(mHideList(month));
+		var i;
+		for(i in show){
+			show[i].classList.remove("hidden");
+		}
+		for(i in hide){
+			hide[i].classList.add("hidden");
+		}
+	}
+	var date=new Date().getTime();
+	function change(){
+		date+=86400000;
+		setday(date);
+	}
+	function init(){
+		change();
+		setInterval(change,5000);
+	}
+	</script>
+</head>
+<body onload="init()">
+	<div id="timor">
+		<!-- <div id="side1"></div>
+		<div id="side2"></div> -->
+		<div id="cback">
+			<div id="back"></div>
+			<div id="back2"></div>
+		</div>
+		<div id="cm12">
+			<div id="m12" class="card m s">DEC</div>
+			<id class="side" />
+		</div>
+		<div id="cm11">
+			<div id="m11" class="card m s">NOV</div>
+			<id class="side" />
+		</div>
+		<div id="cm10">
+			<div id="m10" class="card m s">OCT</div>
+			<id class="side" />
+		</div>
+		<div id="cm6">
+			<div id="m9" class="card m s">SEP</div>
+			<id class="side" />
+		</div>
+		<div id="cm8">
+			<div id="m8" class="card m s">AUG</div>
+			<id class="side" />
+		</div>
+		<div id="cm7">
+			<div id="m7" class="card m s">JUN</div>
+			<id class="side" />
+		</div>
+		<div id="cm6">
+			<div id="m6" class="card m s">JUL</div>
+			<id class="side" />
+		</div>
+		<div id="cm5">
+			<div id="m5" class="card m s">MAY</div>
+			<id class="side" />
+		</div>
+		<div id="cm4">
+			<div id="m4" class="card m s">APR</div>
+			<id class="side" />
+		</div>
+		<div id="cm3">
+			<div id="m3" class="card m s">MAR</div>
+			<id class="side" />
+		</div>
+		<div id="cm2">
+			<div id="m2" class="card m s">FEB</div>
+			<id class="side" />
+		</div>
+		<div id="cm1">
+			<div id="m1" class="card m s">JAN</div>
+			<id class="side" />
+		</div>
+		<div id="cw6">
+			<div id="w6" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">SAT</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw5">
+			<div id="w5" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">FRI</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw4">
+			<div id="w4" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">THU</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw3">
+			<div id="w3" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">WED</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw2">
+			<div id="w2" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">TUE</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw1">
+			<div id="w1" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">MON</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cw0">
+			<div id="w0" class="card w">
+				<div class="w0 s"></div>
+				<div class="w1 s">SUN</div>
+			</div>
+			<id class="side" />
+		</div>
+		<div id="cd0">
+			<div id="d0" class="card d2 s">0</div>
+			<id class="side" />
+		</div>
+		<div id="cd9">
+			<div id="d9" class="card d2 s">9</div>
+			<id class="side" />
+		</div>
+		<div id="cd8">
+			<div id="d8" class="card d2 s">8</div>
+			<id class="side" />
+		</div>
+		<div id="cd7">
+			<div id="d7" class="card d2 s">7</div>
+			<id class="side" />
+		</div>
+		<div id="cd6">
+			<div id="d6" class="card d2 s">6</div>
+			<id class="side" />
+		</div>
+		<div id="cd5">
+			<div id="d5" class="card d2 s">5</div>
+			<id class="side" />
+		</div>
+		<div id="cd4">
+			<div id="d4" class="card d2 s">4</div>
+			<id class="side" />
+		</div>
+		<div id="cd3">
+			<div id="d3" class="card d2 s">3</div>
+			<id class="side" />
+		</div>
+		<div id="cd2">
+			<div id="d2" class="card d2 s">2</div>
+			<id class="side" />
+		</div>
+		<div id="cd1">
+			<div id="d1" class="card d2 s">1</div>
+			<id class="side" />
+		</div>
+		<div id="cd30">
+			<div id="d30" class="card d1 s">3</div>
+			<id class="side" />
+		</div>
+		<div id="cd20">
+			<div id="d20" class="card d1 s">2</div>
+			<id class="side" />
+		</div>
+		<div id="cd10">
+			<div id="d10" class="card d1 s">1</div>
+			<id class="side" />
+		</div>
+		<div id="cfront">
+			<div id="roll"></div>
+			<div id="front"></div>
+		</div>
+	</div>
+</body>
+</html>
