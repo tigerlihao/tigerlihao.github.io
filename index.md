@@ -15,9 +15,9 @@ tagline: This is tigerlihao's website.
     
 ## 我的博客文章
 
-<ul class="posts">
+<ul>
   {% for post in site.posts %}
-    <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span class="muted">{{ post.date | date: "%Y-%m-%d" }}</span></li>
   {% endfor %}
 </ul>
 
