@@ -4,18 +4,18 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-pygments: true
+pygments: false
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : TIGERLIHAO
+tagline: Li Hao's Site
 author :
-  name : Name Lastname
+  name : tigerlihao
   email : blah@email.test
-  github : username
-  twitter : username
+  github : tigerlihao
+  twitter : tigerlihao
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.com
+production_url : http://www.tigerlihao.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -70,9 +70,9 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change theme here if needed.
   #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+  archive_path: /archive/
+  categories_path : /categories/
+  tags_path : /tags/
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : tigerlihao
     livefyre :
       site_id : 123
     intensedebate :
