@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "Jekyll简介"
 category : lessons
 tags : [intro, beginner, jekyll, tutorial]
 ---
@@ -8,20 +9,20 @@ tags : [intro, beginner, jekyll, tutorial]
 This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
-## Overview 
+## 概述 
 
-### What is Jekyll?
+### Jekyll是什么？
 
 Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
 dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as "a simple, blog aware, static site generator".
 
-### Examples
+### Jekyll的应用案例
 
 This website is created with Jekyll. [Other Jekyll websites](https://github.com/mojombo/jekyll/wiki/Sites).
 
 
 
-### What does Jekyll Do?
+### Jekyll能够做什么？
 
 Jekyll is a ruby gem you install on your local system.
 Once there you can call `jekyll --server` on a directory and provided that directory
@@ -34,15 +35,15 @@ The intention here is that you can serve all contents in this folder statically 
 You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
 on each request, Jekyll does this once _beforehand_ and caches the _entire website_ in a folder for serving statically.
 
-### Jekyll is Not Blogging Software
+### Jekyll不是博客软件
 
-**Jekyll is a parsing engine.**
+**Jekyll是一个解析引擎。**
 
 Jekyll does not come with any content nor does it have any templates or design elements.
 This is a common source of confusion when getting started.
 Jekyll does not come with anything you actually use or see on your website - you have to make it.
 
-### Why Should I Care?
+### 为什么要使用Jekyll？
 
 Jekyll is very minimalistic and very efficient.
 The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server.
@@ -61,7 +62,7 @@ Therefore if you like to keep things simple and you prefer the command-line over
 - Ability to host freely on GitHub Pages.
 - No database required.
 
-# How Jekyll Works
+# Jekyll运行机制
 
 The following is a complete but concise outline of exactly how Jekyll works.
 
@@ -73,7 +74,7 @@ Learning these core concepts should help you avoid common frustrations and ultim
 help you better understand the code examples contained throughout Jekyll-Bootstrap.
 
 
-## Initial Setup
+## 安装
 
 After [installing jekyll](/index.html#start-now) you'll need to format your website directory in a way jekyll expects.
 Jekyll-bootstrap conveniently provides the base directory format.
@@ -124,7 +125,7 @@ Jekyll expects your website directory to be laid out like so:
 (read more: <https://github.com/mojombo/jekyll/wiki/Usage>)
 
 
-### Jekyll Configuration
+### Jekyll配置
 
 Jekyll supports various configuration options that are fully outlined here:
 <https://github.com/mojombo/jekyll/wiki/Configuration>
@@ -132,7 +133,7 @@ Jekyll supports various configuration options that are fully outlined here:
 
 
 
-## Content in Jekyll
+## Jekyll中的内容
 
 Content in Jekyll is either a post or a page.
 These content "objects" get inserted into one or more templates to build the final output for its respective static-page.

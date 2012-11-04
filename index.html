@@ -1,0 +1,30 @@
+---
+layout: page
+title: Welcome!
+tagline: This is tigerlihao's website.
+---
+{% include JB/setup %}
+<div class="row">
+<div class="span4">
+<h3>我的项目展示</h3>
+<ul>
+  <li><a href="/html5demo/cubic/">HTML5 Canvas实现魔方</a></li>
+  <li><a href="/html5demo/timor/">HTML5+CSS3仿真Timor台历</a></li>
+</ul>
+</div>
+<div class="span4">
+<h3>我的博客文章</h3>
+<ul>
+{% for post in site.posts limit:5 %}
+  <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span class="muted">{{ post.date | date: "%Y-%m-%d" }}</span></li>
+{% endfor %}
+</ul>
+</div>
+<div class="span4">
+<h3>我的摄影作品</h3>
+<ul>
+  <li><a href="http://tigerphoto.diandian.com/archive">点点：泰格影像志</a></li>
+  <li><a href="http://www.flickr.com/photos/tigerlihao">Flickr：tigerlihao</a></li>
+</ul>
+</div>
+</div>
