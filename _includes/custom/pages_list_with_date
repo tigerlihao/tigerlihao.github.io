@@ -1,0 +1,4 @@
+{% for node in pages_list %}
+  <li><a href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a> <span class="muted">{{ node.date | date: "%Y-%m-%d" }}</span></li>
+{% endfor %}
+{% assign pages_list = nil %}

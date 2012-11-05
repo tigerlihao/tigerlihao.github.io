@@ -6,11 +6,11 @@
   {% if forloop.first %}
   <div class="row">
     <div class="span2">
-      <h2 class="archive-year">{{this_year}}</h2>
+      <h2 class="align-right">{{this_year}}</h2>
     </div>
     <div class="span10">
       <div class="row">
-        <div class="span1"><h3 class="archive-month">{{this_month}}</h3></div>
+        <div class="span1"><h3 class="align-center">{{this_month}}</h3></div>
         <div class="span9">
           <ul class="unstyled">
   {% endif %}
@@ -32,11 +32,11 @@
   <hr />
   <div class="row">
     <div class="span2">
-      <h2 class="archive-year">{{next_year}}</h2>
+      <h2 class="align-right">{{next_year}}</h2>
     </div>
     <div class="span10">
       <div class="row">
-        <div class="span1"><h3 class="archive-month">{{next_month}}</h3></div>
+        <div class="span1"><h3 class="align-center">{{next_month}}</h3></div>
         <div class="span9">
           <ul class="unstyled">
     {% else %}    
@@ -46,7 +46,7 @@
       </div>
       <hr />
       <div class="row">
-        <div class="span1"><h3 class="archive-month">{{next_month}}</h3></div>
+        <div class="span1"><h3 class="align-center">{{next_month}}</h3></div>
         <div class="span9">
           <ul class="unstyled">
       {% endif %}

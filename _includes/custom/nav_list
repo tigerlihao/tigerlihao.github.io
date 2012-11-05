@@ -1,0 +1,6 @@
+{% if page.url == '/index.html' %}<li class="active"><a href="/" class="active">首页</a></li>{% else %}<li><a href="/">首页</a></li>{% endif %}
+{% if page.url == '/projects/index.html' %}<li class="active"><a href="/projects/" class="active">项目</a></li>{% else %}<li><a href="/projects/">项目</a></li>{% endif %}
+{% if page.url == '/categories/index.html' %}<li class="active"><a href="/categories/" class="active">分类</a></li>{% else %}<li><a href="/categories/">分类</a></li>{% endif %}
+{% if page.url == '/archive/index.html' %}<li class="active"><a href="/archive/" class="active">存档</a></li>{% else %}<li><a href="/archive/">存档</a></li>{% endif %}
+{% if page.url == '/tags/index.html' %}<li class="active"><a href="/tags/" class="active">标签</a></li>{% else %}<li><a href="/tags/">标签</a></li>{% endif %}
+{% if page.url == '/about/index.html' %}<li class="active"><a href="/about/" class="active">关于</a></li>{% else %}<li><a href="/about/">关于</a></li>{% endif %}
