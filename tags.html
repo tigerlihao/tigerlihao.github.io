@@ -2,18 +2,12 @@
 layout: page
 title: 标签索引
 permalink: /tags/index.html
-header: Posts By Tag
-group: navigation
 navtext: "标签"
 ---
-{% include JB/setup %}
-
 <ul class="tag_box inline">
   {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
+  {% include tags_list %}
 </ul>
-
-
 {% for tag in site.tags %} 
 <div class="row">
 <div class="span3">
@@ -22,7 +16,7 @@ navtext: "标签"
 <div class="span9">
 	<ul>
     {% assign pages_list = tag[1] %}  
-    {% include custom/pages_list_with_date %}
+    {% include pages_list_with_date %}
   </ul>
 </div>
 </div>

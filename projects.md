@@ -2,10 +2,8 @@
 layout: page
 title: "项目列表"
 permalink: /projects/index.html
-group: navigation
 navtext: "项目"
 ---
-{% include JB/setup %}
 
 ## HTML5演示
 

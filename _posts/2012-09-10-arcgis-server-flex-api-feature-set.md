@@ -4,7 +4,6 @@ title: "ArcGIS Server Flex API中Feature Set构建问题"
 category: study
 tags: [ArcGIS, Flex, GIS]
 ---
-{% include JB/setup %}
 
 ### 问题
 

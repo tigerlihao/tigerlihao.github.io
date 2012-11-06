@@ -1,5 +1,44 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+</div>
+<div class="row">
+  <div class="span8">
+    {{ content }}
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}<li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>{% else %}<li class="prev disabled"><a>&larr; 上一篇</a></li>{% endif %}
+      <li><a href="{{ site.archive_path }}">文章存档</a></li>
+      {% if page.next %}<li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>{% else %}<li class="next disabled"><a>下一篇 &rarr;</a>{% endif %}
+      </ul>
+    </div>
+    <hr>
+    {% include duoshuo-comments %}
+  </div>
+  <div class="span4">
+    <h4>发布时间</h4>
+    <div class="date"><span>{{ page.date | date:  "%Y年%m月%d日" }}</span></div>
+    {% unless page.tags == empty %}
+    <h4>标签</h4>
+    <ul class="tag_box">
+    {% assign tags_list = page.tags %}
+    {% include tags_list %}
+    </ul>
+    {% endunless %}  
+  </div>
+</div>
+{% if page.mathtype %}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],["\\(","\\)"]],processEscapes:true}});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax:{skipTags:['script','noscript','style','textarea','pre','code']}});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function(){var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElement().parentNode.className+=' has-jax';}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{% endif %}

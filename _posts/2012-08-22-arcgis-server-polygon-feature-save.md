@@ -4,7 +4,6 @@ title: "ArcGIS Server要素服务多边形保存问题"
 category: study
 tags: [ArcGIS, Web Service, GIS]
 ---
-{% include JB/setup %}
 
 ### 问题
 
