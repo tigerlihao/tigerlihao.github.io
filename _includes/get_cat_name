@@ -1,0 +1,1 @@
+{% if site.cat_names[cat_url] %}{{ site.cat_names[cat_url] }}{% else %}{{ cat_url | capitalize}}{% endif %}

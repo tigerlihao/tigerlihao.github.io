@@ -8,10 +8,11 @@ navtext: "分类"
   {% assign categories_list = site.categories %}
   {% include categories_list %}
 </ul>
-{% for category in site.categories %} 
+{% for category in site.categories %}
+{% capture cat_url %}{{ category[0] | join: "/" }}{% endcapture %}
 <div class="row">
 <div class="span3">
-  <h3 id="{{ category[0] }}-ref" class="align-right">{{ category[0] | join: "/" | capitalize}}</h3>
+  <h3 id="{{ category[0] }}-ref" class="align-right">{% include get_cat_name %}</h3>
 </div>
 <div class="span9">
 	<ul>

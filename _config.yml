@@ -34,3 +34,6 @@ duoshuo_short_name : tigerlihao
 archive_path: /archive/
 categories_path : /categories/
 tags_path : /tags/
+cat_names :
+  journal : '日志'
+  study : '学习'
