@@ -25,7 +25,7 @@ tags: [ArcGIS, Web Service, GIS, WFS]
 4.  找到WFSServer配置的部分，在`<Properties>`节点中插入`<AxisOrderWFS11>longlat</AxisOrderWFS11>`，如下面代码片段所示；
 5.  重新启动ArcGIS Server。
 
-~~~ XML
+{% highlight xml %}
     <Extension>
       <TypeName>WFSServer</TypeName>
       <Enabled>true</Enabled>
@@ -42,4 +42,4 @@ tags: [ArcGIS, Web Service, GIS, WFS]
         <WebEnabled>true</WebEnabled>
       </Info>
     </Extension>
-~~~
+{% endhighlight %}
