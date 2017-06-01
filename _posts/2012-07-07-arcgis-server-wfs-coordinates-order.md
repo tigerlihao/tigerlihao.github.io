@@ -1,8 +1,14 @@
 ---
+title: 用ArcGIS Server发布WFS时坐标顺序设置
+date: 2012-07-07 00:00:00 Z
+categories:
+- study
+tags:
+- ArcGIS
+- Web Service
+- GIS
+- WFS
 layout: post
-title: "用ArcGIS Server发布WFS时坐标顺序设置"
-category: study
-tags: [ArcGIS, Web Service, GIS, WFS]
 highlight: true
 ---
 

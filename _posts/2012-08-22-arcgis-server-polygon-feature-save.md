@@ -1,8 +1,13 @@
 ---
+title: ArcGIS Server要素服务多边形保存问题
+date: 2012-08-22 00:00:00 Z
+categories:
+- study
+tags:
+- ArcGIS
+- Web Service
+- GIS
 layout: post
-title: "ArcGIS Server要素服务多边形保存问题"
-category: study
-tags: [ArcGIS, Web Service, GIS]
 ---
 
 ### 问题

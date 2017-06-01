@@ -1,39 +1,35 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-# auto: true
+---
+title: TIGERLIHAO
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+permalink: "/:categories/:year/:month/:day/:title"
+exclude:
+- ".rvmrc"
+- ".rbenv-version"
+- README.md
+- Rakefile
+- changelog.md
 markdown: kramdown
 pygments: true
-
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
-title : TIGERLIHAO
 tagline: Li Hao's Site
-author :
-  name : tigerlihao
-  email : blah@email.test
-  github : tigerlihao
-  twitter : tigerlihao
-  feedburner : feedname
-
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.com, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://tigerlihao.com
-
-google_analytics_id : 'UA-10752284-7'
-duoshuo_short_name : tigerlihao
-archive_path: /archive/
-categories_path : /categories/
-tags_path : /tags/
-cat_names :
-  journal : '日志'
-  study : '学习'
+author:
+  name: tigerlihao
+  email: blah@email.test
+  github: tigerlihao
+  twitter: tigerlihao
+  feedburner: feedname
+production_url: http://tigerlihao.com
+google_analytics_id: UA-10752284-7
+duoshuo_short_name: tigerlihao
+archive_path: "/archive/"
+categories_path: "/categories/"
+tags_path: "/tags/"
+cat_names:
+  journal: 日志
+  study: 学习

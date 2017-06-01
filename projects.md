@@ -1,8 +1,8 @@
 ---
+title: 项目列表
+permalink: "/projects/index.html"
 layout: page
-title: "项目列表"
-permalink: /projects/index.html
-navtext: "项目"
+navtext: 项目
 ---
 
 ## HTML5演示

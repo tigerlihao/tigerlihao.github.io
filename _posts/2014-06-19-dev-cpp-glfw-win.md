@@ -1,8 +1,15 @@
 ---
+title: Dev C++中配置glfw编译环境
+date: 2014-06-19 00:00:00 Z
+categories:
+- study
+tags:
+- Dev C++
+- glfw
+- C
+- mingw
+- OpenGL
 layout: post
-title: "Dev C++中配置glfw编译环境"
-category: study
-tags: [Dev C++, glfw, C, mingw, OpenGL]
 ---
 
 ### 问题

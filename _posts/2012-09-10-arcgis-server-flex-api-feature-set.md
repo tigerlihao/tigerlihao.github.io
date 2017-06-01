@@ -1,8 +1,13 @@
 ---
+title: ArcGIS Server Flex API中Feature Set构建问题
+date: 2012-09-10 00:00:00 Z
+categories:
+- study
+tags:
+- ArcGIS
+- Flex
+- GIS
 layout: post
-title: "ArcGIS Server Flex API中Feature Set构建问题"
-category: study
-tags: [ArcGIS, Flex, GIS]
 ---
 
 ### 问题
